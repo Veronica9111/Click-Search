@@ -1,0 +1,19 @@
+{
+    "name": "Click & search weibo",
+    "version": "1.0",
+    "description": "Just click the search button forever",
+    "permissions" : ["storage"],
+    "content_scripts": 
+    [
+        {
+            "matches": ["https://s.weibo.com/weibo*"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": 
+    {
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+  }
